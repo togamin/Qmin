@@ -8,33 +8,84 @@
 
 import UIKit
 
-class QRegistViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
+class QRegistViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate,UIScrollViewDelegate {
     
 
     @IBOutlet weak var questionField: UITextField!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var myPicker: UIPickerView!
+    @IBOutlet weak var textView: UITextView!
     var pickerList:[String]!
+    
+    // Screenの高さ
+    var screenHeight:CGFloat!
+    // Screenの幅
+    var screenWidth:CGFloat!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.scrollView.delegate = self
+        self.myPicker.delegate = self
         self.questionField.delegate = self
         self.pickerList = ["英語","就活","動物","ドラマ"]
         
+        // 画面サイズ取得
+        let screenSize: CGRect = UIScreen.main.bounds
+        self.screenWidth = screenSize.width
+        self.screenHeight = screenSize.height
+        
+        // 表示窓のサイズと位置を設定
+        scrollView.frame.size = CGSize(width: screenWidth, height: screenHeight)
+        
+        // UIScrollViewに追加
+        self.scrollView.addSubview(self.questionField)
+        self.scrollView.addSubview(self.myPicker)
+        self.scrollView.addSubview(self.textView)
+        
+        // UIScrollViewの大きさをスクリーンの縦方向を２倍にする
+        scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight + 120)
+        
+        // スクロールの跳ね返り無し
+        //scrollView.bounces = false
+        
+        // ビューに追加
+        self.view.addSubview(scrollView)
+        
+        
+        
+        
+        
+        // 仮のサイズでツールバー生成
+        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
+        kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
+        // スペーサー
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        // 閉じるボタン
+        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action:#selector(self.closeKeybord(_:)))
+        kbToolBar.items = [spacer, commitButton]
+        self.textView.inputAccessoryView = kbToolBar
     }
-    
+    @objc func closeKeybord(_ sender:Any){
+        self.view.endEditing(true)
+    }
+    /*
     override func viewWillAppear(_ animated: Bool) {
-        
         super.viewWillAppear(animated)
-        self.configureObserver()
         
-    }
+        NotificationCenter.default.addObserver(self,selector: #selector(QRegistViewController.keyboardWillShow(_:)),name: NSNotification.Name.UIKeyboardWillShow,object: nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(QRegistViewController.keyboardWillHide(_:)) ,name: NSNotification.Name.UIKeyboardWillHide,object: nil)
+    }*/
     
     override func viewWillDisappear(_ animated: Bool) {
-        
         super.viewWillDisappear(animated)
-        self.removeObserver() // Notificationを画面が消えるときに削除
+        NotificationCenter.default.removeObserver(self,name: .UIKeyboardWillShow,object: self.view.window)
+        NotificationCenter.default.removeObserver(self,name: .UIKeyboardDidHide,object: self.view.window)
     }
-    
+
     //UIPickerViewの列の数
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -57,51 +108,27 @@ class QRegistViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         self.questionField.resignFirstResponder()
         return true
     }
-
-    //キーボード以外の画面がタップされた時にキーボードをしまう。
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    /*
+    @objc func keyboardWillShow(_ notification: Notification) {
+        let info = notification.userInfo!
+        let keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        // bottom of textField
+        let bottomTextField = textView.frame.origin.y + textView.frame.height
+        // top of keyboard
+        let topKeyboard = screenHeight - keyboardFrame.size.height
+        // 重なり
+        let distance = bottomTextField - topKeyboard
+        
+        if distance >= 0 {
+            // scrollViewのコンテツを上へオフセット + 20.0(追加のオフセット)
+            self.scrollView.contentOffset.y = distance + 20.0
+        }
     }
     
-    // Notificationを設定
-    func configureObserver() {
-        let notification = NotificationCenter.default
-        notification.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        notification.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    // Notificationを削除
-    func removeObserver() {
-        
-        let notification = NotificationCenter.default
-        notification.removeObserver(self)
-    }
-    
-    // キーボードが現れた時に、画面全体をずらす。
-    @objc func keyboardWillShow(notification: Notification?) {
-        
-        
-        
-        let rect = (notification?.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
-        let duration: TimeInterval? = notification?.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
-        
-        UIView.animate(withDuration: duration!, animations: { () in
-            let transform = CGAffineTransform(translationX: 0, y: -(rect?.size.height)!)
-            self.view.transform = transform
-            
-        })
-        
-    }
-    
-    // キーボードが消えたときに、画面を戻す
-    @objc func keyboardWillHide(notification: Notification?) {
-        
-        let duration: TimeInterval? = notification?.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? Double
-        UIView.animate(withDuration: duration!, animations: { () in
-            
-            self.view.transform = CGAffineTransform.identity
-        })
-    }
+    @objc func keyboardWillHide(_ notification: Notification) {
+        self.scrollView.contentOffset.y = 0
+    }*/
     
     
     override func didReceiveMemoryWarning() {
