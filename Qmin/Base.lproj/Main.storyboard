@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="-101.19940029985008"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Tab View Controller-->
         <scene sceneID="5jV-13-BrS">
             <objects>
-                <tabBarController id="54t-90-Z8Q" sceneMemberID="viewController">
+                <tabBarController id="54t-90-Z8Q" customClass="myTabViewController" customModule="Qmin" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ND-av-9dG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
