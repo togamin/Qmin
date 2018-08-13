@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B76CB6FE211FED7600EA3C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */; };
-		B76CB700211FED7600EA3C36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB6FF211FED7600EA3C36 /* ViewController.swift */; };
 		B76CB703211FED7600EA3C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76CB701211FED7600EA3C36 /* Main.storyboard */; };
 		B76CB706211FED7600EA3C36 /* Qmin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B76CB704211FED7600EA3C36 /* Qmin.xcdatamodeld */; };
 		B76CB708211FED7A00EA3C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76CB707211FED7A00EA3C36 /* Assets.xcassets */; };
@@ -16,12 +15,15 @@
 		B76CB713211FFD0400EA3C36 /* commonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB712211FFD0400EA3C36 /* commonItem.swift */; };
 		B76CB7152120012300EA3C36 /* QRegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB7142120012300EA3C36 /* QRegistViewController.swift */; };
 		B76CB71721215CDA00EA3C36 /* myTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71621215CDA00EA3C36 /* myTabViewController.swift */; };
+		B76CB71921215EC300EA3C36 /* images in Resources */ = {isa = PBXBuildFile; fileRef = B76CB71821215EC300EA3C36 /* images */; };
+		B76CB71B21215FF000EA3C36 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71A21215FF000EA3C36 /* QuestionViewController.swift */; };
+		B76CB71D2121662100EA3C36 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71C2121662100EA3C36 /* CategoryTableViewController.swift */; };
+		B76CB71F2121664E00EA3C36 /* QListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71E2121664E00EA3C36 /* QListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B76CB6FA211FED7600EA3C36 /* Qmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B76CB6FF211FED7600EA3C36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B76CB702211FED7600EA3C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B76CB705211FED7600EA3C36 /* Qmin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Qmin.xcdatamodel; sourceTree = "<group>"; };
 		B76CB707211FED7A00EA3C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +32,10 @@
 		B76CB712211FFD0400EA3C36 /* commonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commonItem.swift; sourceTree = "<group>"; };
 		B76CB7142120012300EA3C36 /* QRegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRegistViewController.swift; sourceTree = "<group>"; };
 		B76CB71621215CDA00EA3C36 /* myTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabViewController.swift; sourceTree = "<group>"; };
+		B76CB71821215EC300EA3C36 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		B76CB71A21215FF000EA3C36 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		B76CB71C2121662100EA3C36 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		B76CB71E2121664E00EA3C36 /* QListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +68,19 @@
 		B76CB6FC211FED7600EA3C36 /* Qmin */ = {
 			isa = PBXGroup;
 			children = (
-				B76CB71621215CDA00EA3C36 /* myTabViewController.swift */,
 				B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */,
-				B76CB6FF211FED7600EA3C36 /* ViewController.swift */,
 				B76CB701211FED7600EA3C36 /* Main.storyboard */,
+				B76CB71E2121664E00EA3C36 /* QListTableViewController.swift */,
+				B76CB71C2121662100EA3C36 /* CategoryTableViewController.swift */,
+				B76CB71621215CDA00EA3C36 /* myTabViewController.swift */,
+				B76CB71A21215FF000EA3C36 /* QuestionViewController.swift */,
 				B76CB7142120012300EA3C36 /* QRegistViewController.swift */,
 				B76CB712211FFD0400EA3C36 /* commonItem.swift */,
 				B76CB707211FED7A00EA3C36 /* Assets.xcassets */,
 				B76CB709211FED7A00EA3C36 /* LaunchScreen.storyboard */,
 				B76CB70C211FED7A00EA3C36 /* Info.plist */,
 				B76CB704211FED7600EA3C36 /* Qmin.xcdatamodeld */,
+				B76CB71821215EC300EA3C36 /* images */,
 			);
 			path = Qmin;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76CB71921215EC300EA3C36 /* images in Resources */,
 				B76CB70B211FED7A00EA3C36 /* LaunchScreen.storyboard in Resources */,
 				B76CB708211FED7A00EA3C36 /* Assets.xcassets in Resources */,
 				B76CB703211FED7600EA3C36 /* Main.storyboard in Resources */,
@@ -147,10 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76CB71D2121662100EA3C36 /* CategoryTableViewController.swift in Sources */,
 				B76CB71721215CDA00EA3C36 /* myTabViewController.swift in Sources */,
 				B76CB706211FED7600EA3C36 /* Qmin.xcdatamodeld in Sources */,
-				B76CB700211FED7600EA3C36 /* ViewController.swift in Sources */,
+				B76CB71B21215FF000EA3C36 /* QuestionViewController.swift in Sources */,
 				B76CB6FE211FED7600EA3C36 /* AppDelegate.swift in Sources */,
+				B76CB71F2121664E00EA3C36 /* QListTableViewController.swift in Sources */,
 				B76CB713211FFD0400EA3C36 /* commonItem.swift in Sources */,
 				B76CB7152120012300EA3C36 /* QRegistViewController.swift in Sources */,
 			);
