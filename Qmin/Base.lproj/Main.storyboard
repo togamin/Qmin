@@ -134,11 +134,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QListCell" textLabel="QMp-4e-alG" detailTextLabel="0A3-d4-xVA" style="IBUITableViewCellStyleSubtitle" id="WMr-zO-BHn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="QListCell" textLabel="QMp-4e-alG" detailTextLabel="0A3-d4-xVA" style="IBUITableViewCellStyleSubtitle" id="WMr-zO-BHn">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WMr-zO-BHn" id="jOB-ca-xbe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QMp-4e-alG">
@@ -174,11 +174,63 @@
                     </navigationItem>
                     <connections>
                         <outlet property="QListTableView" destination="OYW-4b-2Tl" id="hH1-op-HoG"/>
+                        <segue destination="CzG-EX-Vno" kind="show" identifier="gotoDetail" id="czV-1p-KXf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYy-5t-8Kj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="897" y="634"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="lwc-rx-5Ec">
+            <objects>
+                <viewController id="CzG-EX-Vno" customClass="QDetailViewController" customModule="Qmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nlx-VT-DsH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pzD-XM-QSK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Irl-Er-okj">
+                                        <rect key="frame" x="29" y="100" width="313" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ああああああ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bhv-YM-cds">
+                                        <rect key="frame" x="65" y="279" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="2x8-ms-jzP"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pzD-XM-QSK" firstAttribute="top" secondItem="Nlx-VT-DsH" secondAttribute="top" id="60B-lE-JXK"/>
+                            <constraint firstAttribute="bottom" secondItem="pzD-XM-QSK" secondAttribute="bottom" id="cai-bT-Qaj"/>
+                            <constraint firstItem="pzD-XM-QSK" firstAttribute="leading" secondItem="F6Q-U4-77Q" secondAttribute="leading" id="ua4-MO-hsE"/>
+                            <constraint firstItem="pzD-XM-QSK" firstAttribute="trailing" secondItem="F6Q-U4-77Q" secondAttribute="trailing" id="zmq-2z-fRC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F6Q-U4-77Q"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MRT-ML-WFT"/>
+                    <connections>
+                        <outlet property="QDetailField" destination="Irl-Er-okj" id="41q-8u-4mP"/>
+                        <outlet property="QDetailView" destination="Bhv-YM-cds" id="IwV-Ky-h6U"/>
+                        <outlet property="scrollView" destination="pzD-XM-QSK" id="qkc-kt-nbn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3I2-kR-aNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.5999999999999" y="631.93403298350825"/>
         </scene>
         <!--質問の追加-->
         <scene sceneID="Szz-bp-Qit">
@@ -258,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdT-Vc-P6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="634.632683658171"/>
+            <point key="canvasLocation" x="1753" y="1406"/>
         </scene>
         <!--Question-->
         <scene sceneID="td2-i4-bO2">

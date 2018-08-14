@@ -70,6 +70,7 @@ class QRegistViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action:#selector(self.closeKeybord(_:)))
         kbToolBar.items = [spacer, commitButton]
         self.textView.inputAccessoryView = kbToolBar
+        self.questionField.inputAccessoryView = kbToolBar
     }
     @objc func closeKeybord(_ sender:Any){
         self.view.endEditing(true)

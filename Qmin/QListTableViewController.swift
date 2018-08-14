@@ -52,4 +52,27 @@ class QListTableViewController: UITableViewController {
             self.QListTableView.reloadData()
         }
     }
+    //セルをタップしたら発動する処理
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "gotoDetail",sender:nil)
+    }
+    
+    //画面遷移時に呼び出される
+    override func prepare(for segue:UIStoryboardSegue,sender:Any?){
+        print("画面遷移中")
+        if let indexPath = self.QListTableView.indexPathForSelectedRow{
+            
+            let question = self.QList[indexPath.row].question
+            let tag = self.QList[indexPath.row].tag
+            let answer = self.QList[indexPath.row].answer
+            
+            //遷移先のViewControllerを格納
+            let controller = segue.destination as! QDetailViewController
+            
+            //遷移先の変数に代入
+            controller.question = question
+            controller.tag = tag
+            controller.answer = answer
+        }
+    }
 }
