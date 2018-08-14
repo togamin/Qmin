@@ -80,3 +80,27 @@ func deleteAllQInfo(){
         print("error")
     }
 }
+
+//指定した行のデータの削除
+func deleteSelect(Index:Int){
+    //AppDelegateを使う用意をしておく
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    //Entityを操作するためのオブジェクトを作成
+    let viewContext = appDelegate.persistentContainer.viewContext
+    //どのエンティティからdataを取得してくるかの設定
+    let query:NSFetchRequest<QInfo> = QInfo.fetchRequest()
+    do{
+        //データを一括取得
+        let fetchResults = try! viewContext.fetch(query)
+        let deleteInfo = fetchResults[Index]
+        viewContext.delete(deleteInfo)
+        //削除した状態を保存
+        try viewContext.save()
+    }catch{
+        print("error")
+    }
+}
+
+
+
+

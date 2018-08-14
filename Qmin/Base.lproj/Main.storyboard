@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Setting-->
         <scene sceneID="yoU-b4-nJN">
             <objects>
                 <tableViewController id="hBK-Ib-yOo" sceneMemberID="viewController">
@@ -119,7 +119,7 @@
                             <outlet property="delegate" destination="hBK-Ib-yOo" id="pMP-US-G9F"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="C35-NZ-JqK"/>
+                    <navigationItem key="navigationItem" title="Setting" id="C35-NZ-JqK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnQ-aN-RMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
