@@ -19,6 +19,7 @@
 		B76CB71B21215FF000EA3C36 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71A21215FF000EA3C36 /* QuestionViewController.swift */; };
 		B76CB71D2121662100EA3C36 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71C2121662100EA3C36 /* CategoryTableViewController.swift */; };
 		B76CB71F2121664E00EA3C36 /* QListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71E2121664E00EA3C36 /* QListTableViewController.swift */; };
+		B76CB72521225EA100EA3C36 /* coreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB72421225EA100EA3C36 /* coreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B76CB71A21215FF000EA3C36 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		B76CB71C2121662100EA3C36 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		B76CB71E2121664E00EA3C36 /* QListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QListTableViewController.swift; sourceTree = "<group>"; };
+		B76CB72421225EA100EA3C36 /* coreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B76CB709211FED7A00EA3C36 /* LaunchScreen.storyboard */,
 				B76CB70C211FED7A00EA3C36 /* Info.plist */,
 				B76CB704211FED7600EA3C36 /* Qmin.xcdatamodeld */,
+				B76CB72421225EA100EA3C36 /* coreData.swift */,
 				B76CB71821215EC300EA3C36 /* images */,
 			);
 			path = Qmin;
@@ -162,6 +165,7 @@
 				B76CB706211FED7600EA3C36 /* Qmin.xcdatamodeld in Sources */,
 				B76CB71B21215FF000EA3C36 /* QuestionViewController.swift in Sources */,
 				B76CB6FE211FED7600EA3C36 /* AppDelegate.swift in Sources */,
+				B76CB72521225EA100EA3C36 /* coreData.swift in Sources */,
 				B76CB71F2121664E00EA3C36 /* QListTableViewController.swift in Sources */,
 				B76CB713211FFD0400EA3C36 /* commonItem.swift in Sources */,
 				B76CB7152120012300EA3C36 /* QRegistViewController.swift in Sources */,

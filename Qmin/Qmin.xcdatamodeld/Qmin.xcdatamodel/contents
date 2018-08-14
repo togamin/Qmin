@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="QList" representedClassName="QList" syncable="YES" codeGenerationType="class"/>
+    <entity name="QInfo" representedClassName="QInfo" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="QList" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="QInfo" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

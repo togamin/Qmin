@@ -17,14 +17,16 @@ var Qcategory:[String] = ["英語","就活","英語","英語","就活"]
 //CoreDataから質問情報を格納するための構造体
 //構造体のメリット
 
-struct  QInfo{
+struct  qInfo{
     var question:String!
     var tag:String!
     var answer:String!
-    init(question:String,tag:String,answer:String){
+    var date:String!
+    init(question:String,tag:String,answer:String,date:String){
         self.question = question
         self.tag = tag
         self.answer = answer
+        self.date = date
     }
 }
 
