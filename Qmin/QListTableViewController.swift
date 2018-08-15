@@ -70,6 +70,7 @@ class QListTableViewController: UITableViewController {
             let controller = segue.destination as! QDetailViewController
             
             //遷移先の変数に代入
+            controller.QId = indexPath.row
             controller.question = question
             controller.tag = tag
             controller.answer = answer

@@ -101,6 +101,32 @@ func deleteSelect(Index:Int){
     }
 }
 
+//質問の編集
+func updateQ(Index:Int,question:String,tag:String,answer:String,date:String){
+    //AppDelegateを使う用意をしておく
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    //Entityを操作するためのオブジェクトを作成
+    let viewContext = appDelegate.persistentContainer.viewContext
+    //どのエンティティからdataを取得してくるかの設定
+    let query:NSFetchRequest<QInfo> = QInfo.fetchRequest()
+    do{
+        //データを一括取得
+        let fetchResults = try! viewContext.fetch(query)
+        let updateQInfo = fetchResults[Index]
+        updateQInfo.setValue(question,forKey:"question")
+        updateQInfo.setValue(tag,forKey:"tag")
+        updateQInfo.setValue(answer,forKey:"answer")
+        updateQInfo.setValue(date,forKey:"date")
+        do{
+            try viewContext.save()
+        }catch{
+            
+        }
+    }catch{
+        print("error")
+    }
+}
+
 
 
 
