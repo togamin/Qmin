@@ -10,14 +10,14 @@ import UIKit
 
 class QRegistViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate,UIScrollViewDelegate {
     
-
+    let myDefault = UserDefaults.standard
     @IBOutlet weak var questionField: UITextField!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var myPicker: UIPickerView!
     @IBOutlet weak var textView: UITextView!
-    var pickerList:[String]!
-    var pickerText:String!
+    var tagList:[String]!
+    var pickerText:String!//登録時のpickerの値を入れる用.
     
     // Screenの高さ
     var screenHeight:CGFloat!
@@ -31,8 +31,10 @@ class QRegistViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         self.scrollView.delegate = self
         self.myPicker.delegate = self
         self.questionField.delegate = self
-        self.pickerList = ["英語","就活","動物","ドラマ"]
-        self.pickerText = self.pickerList[0]
+        
+        //初期値の設定。何も入っていない場合は
+        self.myDefault.register(defaults: ["tagList" : ["英語","就活","面白い話"]])
+        self.tagList = self.myDefault.object(forKey: "tagList") as! [String]
         
         // 画面サイズ取得
         let screenSize: CGRect = UIScreen.main.bounds
@@ -96,18 +98,18 @@ class QRegistViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     
     // UIPickerViewの要素の数
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-     return self.pickerList.count
+     return self.tagList.count
     }
     // UIPickerViewに表示する配列
     func pickerView(_ pickerView: UIPickerView,
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
         
-        return pickerList[row]
+        return tagList[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // 選択時の処理
-        self.pickerText = self.pickerList[row]
+        self.pickerText = self.tagList[row]
         print("テスト：",self.pickerText)
     }
     
@@ -160,6 +162,10 @@ class QRegistViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
             //CoreDataへの登録
             Qmin.Qregist(question:self.questionField.text!,tag:self.pickerText,answer:self.textView.text,date:data)
             
+            let alert2 = UIAlertController(title: "登録しました。", message: "", preferredStyle: .alert)
+            alert2.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action:UIAlertAction!) -> Void in}))
+            self.present(alert2,animated: true,completion: {()->Void in print("表示されたよん")})
+            
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in print("キャンセル")}))
         
@@ -167,9 +173,28 @@ class QRegistViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         alert.view.layer.cornerRadius = 25 //角丸にする。
         
         present(alert,animated: true,completion: {()->Void in print("表示されたよん")})
-        
     }
     
+    @IBAction func addTag(_ sender: UIButton) {
+        let alert = UIAlertController(title: "タグの追加", message: "新しいタグを入力してください", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "登録", style: .default, handler: {(action: UIAlertAction!) -> Void in
+            
+            self.tagList.append(alert.textFields![0].text!)
+            // UserDefaultにデータを書き込む
+            self.myDefault.set(self.tagList, forKey: "tagList")
+            self.myPicker.reloadAllComponents()
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in print("キャンセル")}))
+        // テキストフィールドを追加
+        alert.addTextField(configurationHandler: {(addTitleField: UITextField!) -> Void in
+            addTitleField.placeholder = "新しいタグを入力してください。"//プレースホルダー
+        })
+        //その他アラートオプション
+        alert.view.layer.cornerRadius = 25 //角丸にする。
+        present(alert,animated: true,completion: {()->Void in print("表示されたよん")})//completionは動作完了時に発動。
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
