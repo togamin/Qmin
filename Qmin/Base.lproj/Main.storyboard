@@ -128,7 +128,7 @@
         <!--QList-->
         <scene sceneID="kBc-kP-rg3">
             <objects>
-                <tableViewController id="kbT-6v-abk" customClass="QListTableViewController" customModule="Qmin" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="QListTableViewController" id="kbT-6v-abk" customClass="QListTableViewController" customModule="Qmin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OYW-4b-2Tl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,7 +179,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYy-5t-8Kj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897" y="634"/>
+            <point key="canvasLocation" x="1961" y="636"/>
         </scene>
         <!--Edit-->
         <scene sceneID="lwc-rx-5Ec">
@@ -241,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3I2-kR-aNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653.5999999999999" y="631.93403298350825"/>
+            <point key="canvasLocation" x="2708" y="636"/>
         </scene>
         <!--質問の追加-->
         <scene sceneID="Szz-bp-Qit">
@@ -329,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdT-Vc-P6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1753" y="1406"/>
+            <point key="canvasLocation" x="2708" y="1404"/>
         </scene>
         <!--Question-->
         <scene sceneID="td2-i4-bO2">
@@ -463,12 +463,28 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kbT-6v-abk" kind="relationship" relationship="rootViewController" id="upw-05-Mt4"/>
+                        <segue destination="ReL-Uh-6W8" kind="relationship" relationship="rootViewController" id="3g9-fb-v7X"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgE-MI-J4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="635.53223388305855"/>
+        </scene>
+        <!--質問一覧-->
+        <scene sceneID="oEq-7Y-A9s">
+            <objects>
+                <viewController id="ReL-Uh-6W8" customClass="ManyViewControllers" customModule="Qmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uPU-LA-7MK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="z79-WI-VCt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="質問一覧" id="EL3-ae-GT6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sN-RY-F7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="636"/>
         </scene>
         <!--Item-->
         <scene sceneID="FZt-AH-C9o">

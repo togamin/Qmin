@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7016AA721259DB90049087C /* PageMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7016AA621259DB80049087C /* PageMenuView.swift */; };
+		B7016AA921259DD00049087C /* ManyViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7016AA821259DD00049087C /* ManyViewControllers.swift */; };
 		B76CB6FE211FED7600EA3C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */; };
 		B76CB703211FED7600EA3C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76CB701211FED7600EA3C36 /* Main.storyboard */; };
 		B76CB706211FED7600EA3C36 /* Qmin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B76CB704211FED7600EA3C36 /* Qmin.xcdatamodeld */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7016AA621259DB80049087C /* PageMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuView.swift; sourceTree = "<group>"; };
+		B7016AA821259DD00049087C /* ManyViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManyViewControllers.swift; sourceTree = "<group>"; };
 		B76CB6FA211FED7600EA3C36 /* Qmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B76CB702211FED7600EA3C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			children = (
 				B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */,
 				B76CB701211FED7600EA3C36 /* Main.storyboard */,
+				B7016AA821259DD00049087C /* ManyViewControllers.swift */,
 				B76CB72621227E2500EA3C36 /* QDetailViewController.swift */,
 				B76CB71E2121664E00EA3C36 /* QListTableViewController.swift */,
 				B76CB71C2121662100EA3C36 /* CategoryTableViewController.swift */,
@@ -81,6 +86,7 @@
 				B76CB71A21215FF000EA3C36 /* QuestionViewController.swift */,
 				B76CB7142120012300EA3C36 /* QRegistViewController.swift */,
 				B76CB712211FFD0400EA3C36 /* commonItem.swift */,
+				B7016AA621259DB80049087C /* PageMenuView.swift */,
 				B76CB707211FED7A00EA3C36 /* Assets.xcassets */,
 				B76CB709211FED7A00EA3C36 /* LaunchScreen.storyboard */,
 				B76CB70C211FED7A00EA3C36 /* Info.plist */,
@@ -170,9 +176,11 @@
 				B76CB6FE211FED7600EA3C36 /* AppDelegate.swift in Sources */,
 				B76CB72521225EA100EA3C36 /* coreData.swift in Sources */,
 				B76CB71F2121664E00EA3C36 /* QListTableViewController.swift in Sources */,
+				B7016AA921259DD00049087C /* ManyViewControllers.swift in Sources */,
 				B76CB72721227E2500EA3C36 /* QDetailViewController.swift in Sources */,
 				B76CB713211FFD0400EA3C36 /* commonItem.swift in Sources */,
 				B76CB7152120012300EA3C36 /* QRegistViewController.swift in Sources */,
+				B7016AA721259DB90049087C /* PageMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
