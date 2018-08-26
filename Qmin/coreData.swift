@@ -59,6 +59,34 @@ func Qread()->[qInfo]{
     return InfoList
 }
 
+func tagQread(tag:String)->[qInfo]{
+    var InfoList:[qInfo] = []
+    //AppDelegateを使う用意をしておく
+    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    //Entityを操作するためのオブジェクトを作成
+    let viewContext = appDelegate.persistentContainer.viewContext
+    
+    let query:NSFetchRequest<QInfo> = QInfo.fetchRequest()
+    let namePredicte = NSPredicate(format: "tag = %@",tag)
+    query.predicate = namePredicte
+    do{
+        //データを一括取得
+        let fetchResults = try! viewContext.fetch(query)
+        //データの取得
+        for result:AnyObject in fetchResults{
+            InfoList.append(qInfo(
+                question:result.value(forKey:"question")! as! String,
+                tag:result.value(forKey:"tag")! as! String,
+                answer:result.value(forKey:"answer")! as! String,
+                date:result.value(forKey:"date")! as! String
+            ))
+        }
+    }catch{
+        print("error:Qread",error)
+    }
+    return InfoList
+}
+
 //データ全削除(ArticleInfo)
 func deleteAllQInfo(){
     //AppDelegateを使う用意をしておく

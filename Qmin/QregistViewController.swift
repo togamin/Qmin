@@ -1,5 +1,5 @@
 //
-//  QDetailViewController.swift
+//  QregistViewController.swift
 //  Qmin
 //
 //  Created by Togami Yuki on 2018/08/26.
@@ -8,26 +8,23 @@
 
 import UIKit
 
-class QDetailViewController: UIViewController {
-
+class QregistViewController: UIViewController {
+    
     // UIScrollViewインスタンス生成
     var scrollView = UIScrollView()
     // Screenの高さ
     var screenHeight:CGFloat!
     // Screenの幅
     var screenWidth:CGFloat!
-    
+
     @IBOutlet weak var QuestionField: UITextField!
     @IBOutlet weak var QmemoTextView: UITextView!
+
     
-    var question:String!
-    var answer:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.QuestionField.text = question
-        self.QmemoTextView.text = answer
+        
         
         // 画面サイズ取得
         let screenSize: CGRect = UIScreen.main.bounds
@@ -38,10 +35,12 @@ class QDetailViewController: UIViewController {
         scrollView.frame.size =
             CGSize(width: screenWidth, height: screenHeight)
         scrollView.center = self.view.center
-        
+
         // UIScrollViewに追加
         scrollView.addSubview(QuestionField)
         scrollView.addSubview(QmemoTextView)
+        
+        
         
         // UIScrollViewの大きさをスクリーンの縦方向を２倍にする
         scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight*2)
@@ -50,9 +49,27 @@ class QDetailViewController: UIViewController {
         self.view.addSubview(scrollView)
 
     }
+    
+    @IBAction func Qsave(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "質問を保存しますか？", message:nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in
+            
+            Qregist(question:self.QuestionField.text!,tag:nowTag,answer:self.QmemoTextView.text,date:nowTime())
+            
+            }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in print("キャンセル")}))
+        //その他アラートオプション
+        alert.view.layer.cornerRadius = 25 //角丸にする。
+        
+        present(alert,animated: true,completion: {()->Void in print("表示されたよん")})
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
     }
+
 }

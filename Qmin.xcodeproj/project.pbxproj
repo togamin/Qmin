@@ -7,27 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B7016AA721259DB90049087C /* PageMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7016AA621259DB80049087C /* PageMenuView.swift */; };
-		B7016AA921259DD00049087C /* ManyViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7016AA821259DD00049087C /* ManyViewControllers.swift */; };
+		B750CDB2213283CB00799CA6 /* TagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750CDB1213283CB00799CA6 /* TagTableViewController.swift */; };
+		B750CDB421328E7500799CA6 /* QListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750CDB321328E7500799CA6 /* QListTableViewController.swift */; };
+		B750CDB62132A21700799CA6 /* QregistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750CDB52132A21700799CA6 /* QregistViewController.swift */; };
+		B750CDB82132AF9400799CA6 /* QDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750CDB72132AF9400799CA6 /* QDetailViewController.swift */; };
 		B76CB6FE211FED7600EA3C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */; };
 		B76CB703211FED7600EA3C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76CB701211FED7600EA3C36 /* Main.storyboard */; };
 		B76CB706211FED7600EA3C36 /* Qmin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B76CB704211FED7600EA3C36 /* Qmin.xcdatamodeld */; };
 		B76CB708211FED7A00EA3C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76CB707211FED7A00EA3C36 /* Assets.xcassets */; };
 		B76CB70B211FED7A00EA3C36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76CB709211FED7A00EA3C36 /* LaunchScreen.storyboard */; };
 		B76CB713211FFD0400EA3C36 /* commonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB712211FFD0400EA3C36 /* commonItem.swift */; };
-		B76CB7152120012300EA3C36 /* QRegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB7142120012300EA3C36 /* QRegistViewController.swift */; };
 		B76CB71721215CDA00EA3C36 /* myTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71621215CDA00EA3C36 /* myTabViewController.swift */; };
 		B76CB71921215EC300EA3C36 /* images in Resources */ = {isa = PBXBuildFile; fileRef = B76CB71821215EC300EA3C36 /* images */; };
 		B76CB71B21215FF000EA3C36 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71A21215FF000EA3C36 /* QuestionViewController.swift */; };
 		B76CB71D2121662100EA3C36 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71C2121662100EA3C36 /* CategoryTableViewController.swift */; };
-		B76CB71F2121664E00EA3C36 /* QListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB71E2121664E00EA3C36 /* QListTableViewController.swift */; };
 		B76CB72521225EA100EA3C36 /* coreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB72421225EA100EA3C36 /* coreData.swift */; };
-		B76CB72721227E2500EA3C36 /* QDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB72621227E2500EA3C36 /* QDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B7016AA621259DB80049087C /* PageMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuView.swift; sourceTree = "<group>"; };
-		B7016AA821259DD00049087C /* ManyViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManyViewControllers.swift; sourceTree = "<group>"; };
+		B750CDB1213283CB00799CA6 /* TagTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewController.swift; sourceTree = "<group>"; };
+		B750CDB321328E7500799CA6 /* QListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QListTableViewController.swift; sourceTree = "<group>"; };
+		B750CDB52132A21700799CA6 /* QregistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QregistViewController.swift; sourceTree = "<group>"; };
+		B750CDB72132AF9400799CA6 /* QDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QDetailViewController.swift; sourceTree = "<group>"; };
 		B76CB6FA211FED7600EA3C36 /* Qmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B76CB702211FED7600EA3C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,14 +37,11 @@
 		B76CB70A211FED7A00EA3C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B76CB70C211FED7A00EA3C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76CB712211FFD0400EA3C36 /* commonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commonItem.swift; sourceTree = "<group>"; };
-		B76CB7142120012300EA3C36 /* QRegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRegistViewController.swift; sourceTree = "<group>"; };
 		B76CB71621215CDA00EA3C36 /* myTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabViewController.swift; sourceTree = "<group>"; };
 		B76CB71821215EC300EA3C36 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		B76CB71A21215FF000EA3C36 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		B76CB71C2121662100EA3C36 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
-		B76CB71E2121664E00EA3C36 /* QListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QListTableViewController.swift; sourceTree = "<group>"; };
 		B76CB72421225EA100EA3C36 /* coreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreData.swift; sourceTree = "<group>"; };
-		B76CB72621227E2500EA3C36 /* QDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,15 +76,14 @@
 			children = (
 				B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */,
 				B76CB701211FED7600EA3C36 /* Main.storyboard */,
-				B7016AA821259DD00049087C /* ManyViewControllers.swift */,
-				B76CB72621227E2500EA3C36 /* QDetailViewController.swift */,
-				B76CB71E2121664E00EA3C36 /* QListTableViewController.swift */,
+				B750CDB72132AF9400799CA6 /* QDetailViewController.swift */,
+				B750CDB52132A21700799CA6 /* QregistViewController.swift */,
+				B750CDB321328E7500799CA6 /* QListTableViewController.swift */,
+				B750CDB1213283CB00799CA6 /* TagTableViewController.swift */,
 				B76CB71C2121662100EA3C36 /* CategoryTableViewController.swift */,
 				B76CB71621215CDA00EA3C36 /* myTabViewController.swift */,
 				B76CB71A21215FF000EA3C36 /* QuestionViewController.swift */,
-				B76CB7142120012300EA3C36 /* QRegistViewController.swift */,
 				B76CB712211FFD0400EA3C36 /* commonItem.swift */,
-				B7016AA621259DB80049087C /* PageMenuView.swift */,
 				B76CB707211FED7A00EA3C36 /* Assets.xcassets */,
 				B76CB709211FED7A00EA3C36 /* LaunchScreen.storyboard */,
 				B76CB70C211FED7A00EA3C36 /* Info.plist */,
@@ -173,14 +170,13 @@
 				B76CB71721215CDA00EA3C36 /* myTabViewController.swift in Sources */,
 				B76CB706211FED7600EA3C36 /* Qmin.xcdatamodeld in Sources */,
 				B76CB71B21215FF000EA3C36 /* QuestionViewController.swift in Sources */,
+				B750CDB82132AF9400799CA6 /* QDetailViewController.swift in Sources */,
 				B76CB6FE211FED7600EA3C36 /* AppDelegate.swift in Sources */,
 				B76CB72521225EA100EA3C36 /* coreData.swift in Sources */,
-				B76CB71F2121664E00EA3C36 /* QListTableViewController.swift in Sources */,
-				B7016AA921259DD00049087C /* ManyViewControllers.swift in Sources */,
-				B76CB72721227E2500EA3C36 /* QDetailViewController.swift in Sources */,
+				B750CDB62132A21700799CA6 /* QregistViewController.swift in Sources */,
+				B750CDB421328E7500799CA6 /* QListTableViewController.swift in Sources */,
+				B750CDB2213283CB00799CA6 /* TagTableViewController.swift in Sources */,
 				B76CB713211FFD0400EA3C36 /* commonItem.swift in Sources */,
-				B76CB7152120012300EA3C36 /* QRegistViewController.swift in Sources */,
-				B7016AA721259DB90049087C /* PageMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

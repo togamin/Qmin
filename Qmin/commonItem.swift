@@ -30,3 +30,30 @@ struct  qInfo{
     }
 }
 
+//現在時刻を取り出す
+func nowTime()->String{
+    let now = NSDate()
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale?
+    dateFormatter.timeStyle = .medium
+    dateFormatter.dateStyle = .medium
+    let data = dateFormatter.string(from: now as Date)
+return data
+}
+
+//質問のデフォルト
+var Qdefault:[qInfo]! = [
+    qInfo(question:"頑張ったことは何ですか？",tag:"就活",answer:"器械体操です",date:nowTime()),
+    qInfo(question:"強みは何ですか?",tag:"就活",answer:"筋力です",date:nowTime()),
+    qInfo(question:"尊敬する人は誰ですか?",tag:"就活",answer:"父です",date:nowTime()),
+    qInfo(question:"有名人のモノマネをする。",tag:"罰ゲーム",answer:"",date:nowTime())
+]
+
+
+
+
+
+
+
+
+
