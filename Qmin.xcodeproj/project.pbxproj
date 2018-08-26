@@ -11,6 +11,7 @@
 		B750CDB421328E7500799CA6 /* QListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750CDB321328E7500799CA6 /* QListTableViewController.swift */; };
 		B750CDB62132A21700799CA6 /* QregistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750CDB52132A21700799CA6 /* QregistViewController.swift */; };
 		B750CDB82132AF9400799CA6 /* QDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750CDB72132AF9400799CA6 /* QDetailViewController.swift */; };
+		B750CDBA2132BB2400799CA6 /* togaminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750CDB92132BB2400799CA6 /* togaminViewController.swift */; };
 		B76CB6FE211FED7600EA3C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */; };
 		B76CB703211FED7600EA3C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76CB701211FED7600EA3C36 /* Main.storyboard */; };
 		B76CB706211FED7600EA3C36 /* Qmin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B76CB704211FED7600EA3C36 /* Qmin.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 		B750CDB321328E7500799CA6 /* QListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QListTableViewController.swift; sourceTree = "<group>"; };
 		B750CDB52132A21700799CA6 /* QregistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QregistViewController.swift; sourceTree = "<group>"; };
 		B750CDB72132AF9400799CA6 /* QDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QDetailViewController.swift; sourceTree = "<group>"; };
+		B750CDB92132BB2400799CA6 /* togaminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = togaminViewController.swift; sourceTree = "<group>"; };
 		B76CB6FA211FED7600EA3C36 /* Qmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B76CB702211FED7600EA3C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				B76CB6FD211FED7600EA3C36 /* AppDelegate.swift */,
 				B76CB701211FED7600EA3C36 /* Main.storyboard */,
+				B750CDB92132BB2400799CA6 /* togaminViewController.swift */,
 				B750CDB72132AF9400799CA6 /* QDetailViewController.swift */,
 				B750CDB52132A21700799CA6 /* QregistViewController.swift */,
 				B750CDB321328E7500799CA6 /* QListTableViewController.swift */,
@@ -170,6 +173,7 @@
 				B76CB71721215CDA00EA3C36 /* myTabViewController.swift in Sources */,
 				B76CB706211FED7600EA3C36 /* Qmin.xcdatamodeld in Sources */,
 				B76CB71B21215FF000EA3C36 /* QuestionViewController.swift in Sources */,
+				B750CDBA2132BB2400799CA6 /* togaminViewController.swift in Sources */,
 				B750CDB82132AF9400799CA6 /* QDetailViewController.swift in Sources */,
 				B76CB6FE211FED7600EA3C36 /* AppDelegate.swift in Sources */,
 				B76CB72521225EA100EA3C36 /* coreData.swift in Sources */,
