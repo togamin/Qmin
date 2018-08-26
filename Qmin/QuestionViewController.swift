@@ -19,14 +19,17 @@ class QuestionViewController: UIViewController {
         print(self.QList)
         //deleteAllQInfo()
         //CoreDateに何も入っていないときに、デフォルトで質問集を入れる。
-        
         if self.QList.count == 0{
             for data in Qdefault{
                 Qregist(question:data.question,tag:data.tag,answer:data.answer,date:data.date)
             }
         }
-        
     }
+    
+    @IBAction func Qmin(_ sender: UIButton) {
+        //ボタンを押すと質問がランダムに表示される。
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
