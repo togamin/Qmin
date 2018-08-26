@@ -22,6 +22,7 @@ class QDetailViewController: UIViewController {
     
     var question:String!
     var answer:String!
+    var Index:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +49,24 @@ class QDetailViewController: UIViewController {
         
         // ビューに追加
         self.view.addSubview(scrollView)
-
     }
+    
+    @IBAction func Qsave(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "質問を上書きしますか？", message:nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in
+            updateQ(Index:self.Index,question:self.QuestionField.text!,tag:nowTag,answer:self.QmemoTextView.text,date:nowTime())
+            let alertOK = UIAlertController(title: "上書きしました", message:nil, preferredStyle: .alert)
+            alertOK.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in}))
+            self.present(alertOK,animated: true,completion: {()->Void in print("表示されたよん")})
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in print("キャンセル")}))
+        //その他アラートオプション
+        alert.view.layer.cornerRadius = 25 //角丸にする。
+        
+        present(alert,animated: true,completion: {()->Void in print("表示されたよん")})
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

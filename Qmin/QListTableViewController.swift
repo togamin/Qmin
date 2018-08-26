@@ -63,6 +63,7 @@ class QListTableViewController: UITableViewController {
             //遷移先の変数に代入
             controller.question = question
             controller.answer = answer
+            controller.Index = indexPath.row
         }
     }
     

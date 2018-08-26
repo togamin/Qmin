@@ -137,6 +137,7 @@ func updateQ(Index:Int,question:String,tag:String,answer:String,date:String){
     let viewContext = appDelegate.persistentContainer.viewContext
     //どのエンティティからdataを取得してくるかの設定
     let query:NSFetchRequest<QInfo> = QInfo.fetchRequest()
+    let namePredicte = NSPredicate(format: "tag = %@",tag)
     do{
         //データを一括取得
         let fetchResults = try! viewContext.fetch(query)

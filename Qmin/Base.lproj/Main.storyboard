@@ -384,7 +384,7 @@
             </objects>
             <point key="canvasLocation" x="2813.5999999999999" y="627.4362818590705"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--質問詳細-->
         <scene sceneID="ygf-b9-xBt">
             <objects>
                 <viewController id="Ep7-sn-pkD" customClass="QDetailViewController" customModule="Qmin" customModuleProvider="target" sceneMemberID="viewController">
@@ -410,6 +410,13 @@
                         <color key="backgroundColor" red="0.94149805860000002" green="0.93405903970000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="DVe-Qe-fJH"/>
                     </view>
+                    <navigationItem key="navigationItem" title="質問詳細" id="Kmz-4y-76u">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5Af-8c-8z1">
+                            <connections>
+                                <action selector="Qsave:" destination="Ep7-sn-pkD" id="NSt-QV-NIF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="QmemoTextView" destination="U8F-hv-Rb9" id="FU4-ln-y5v"/>
                         <outlet property="QuestionField" destination="uUR-BX-nbq" id="yWO-GS-n01"/>
