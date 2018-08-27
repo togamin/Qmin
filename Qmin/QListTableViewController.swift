@@ -8,8 +8,6 @@
 
 import UIKit
 
-var nowTag:String!
-
 class QListTableViewController: UITableViewController {
 
     var QList:[qInfo]!

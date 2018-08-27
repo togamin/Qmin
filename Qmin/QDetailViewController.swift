@@ -54,7 +54,7 @@ class QDetailViewController: UIViewController {
     @IBAction func Qsave(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "質問を上書きしますか？", message:nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in
-            updateQ(Index:self.Index,question:self.QuestionField.text!,tag:nowTag,answer:self.QmemoTextView.text,date:nowTime())
+            print(self.Index); updateQ(Index:self.Index,question:self.QuestionField.text!,tag:nowTag,answer:self.QmemoTextView.text,date:nowTime())
             let alertOK = UIAlertController(title: "上書きしました", message:nil, preferredStyle: .alert)
             alertOK.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in}))
             self.present(alertOK,animated: true,completion: {()->Void in print("表示されたよん")})

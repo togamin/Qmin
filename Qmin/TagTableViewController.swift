@@ -18,8 +18,6 @@ class TagTableViewController: UITableViewController {
         super.viewDidLoad()
         myDefault.register(defaults: ["tagList" : ["就活","英語","面白い話","罰ゲーム"]])
         self.tagList = self.myDefault.object(forKey: "tagList") as! [String]
-
-        
     }
 
     override func didReceiveMemoryWarning() {
