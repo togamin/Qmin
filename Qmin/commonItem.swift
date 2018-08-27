@@ -46,7 +46,11 @@ var Qdefault:[qInfo]! = [
     qInfo(question:"頑張ったことは何ですか？",tag:"就活",answer:"器械体操です.より難度の高い技を習得することを目標に頑張りました。",date:nowTime()),
     qInfo(question:"強みは何ですか?",tag:"就活",answer:"筋力です。器械体操を10年ほど続けていたので、筋力には自身があります。",date:nowTime()),
     qInfo(question:"尊敬する人は誰ですか?",tag:"就活",answer:"ニコラ・テスラです。自分の発送、アイデアを実現するために、頑張っていた点を尊敬しています。また、その天才さに惹かれています。",date:nowTime()),
-    qInfo(question:"有名人のモノマネをする。",tag:"罰ゲーム",answer:"",date:nowTime())
+    qInfo(question:"志望動機はなんですか?",tag:"就活",answer:"直感です。初めて出会った時からこの会社しかないと思っていました。",date:nowTime()),
+    
+    
+    qInfo(question:"ドラえもんのモノマネをする。",tag:"罰ゲーム",answer:"",date:nowTime()),
+    qInfo(question:"変顔の写真を撮られる",tag:"罰ゲーム",answer:"",date:nowTime())
 ]
 
 
