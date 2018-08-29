@@ -94,10 +94,20 @@ class QDetailViewController: UIViewController {
     @IBAction func QSaveBtn(_ sender: UIButton) {
         let alert = UIAlertController(title: "質問を上書きしますか？", message:nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in
-            print(self.Index); updateQ(Index:self.Index,question:self.QuestionField.text!,tag:nowTag,answer:self.QmemoTextView.text,date:nowTime())
-            let alertOK = UIAlertController(title: "上書きしました", message:nil, preferredStyle: .alert)
-            alertOK.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in}))
-            self.present(alertOK,animated: true,completion: {()->Void in print("表示されたよん")})
+            
+            if self.QuestionField.text! != "" {
+            
+                print(self.Index); updateQ(Index:self.Index,question:self.QuestionField.text!,tag:nowTag,answer:self.QmemoTextView.text,date:nowTime())
+                let alertOK = UIAlertController(title: "上書きしました", message:nil, preferredStyle: .alert)
+                alertOK.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in}))
+                self.present(alertOK,animated: true,completion: {()->Void in print("表示されたよん")})
+            }else{
+                let alertNO = UIAlertController(title: "質問が記入されていません。", message:nil, preferredStyle: .alert)
+                alertNO.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in
+                    self.QuestionField.text! = self.question
+                }))
+                self.present(alertNO,animated: true,completion: {()->Void in print("表示されたよん")})
+            }
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in print("キャンセル")}))
         //その他アラートオプション

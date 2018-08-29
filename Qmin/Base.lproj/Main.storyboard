@@ -361,36 +361,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問の回答、詳細、メモを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA2-G2-aDX">
-                                <rect key="frame" x="16" y="168" width="347" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="★質問の回答、詳細、メモを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA2-G2-aDX">
+                                <rect key="frame" x="16" y="168" width="362" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問 or タイトルを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHN-5Z-Xza">
-                                <rect key="frame" x="16" y="79" width="285" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="★質問 or タイトルを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHN-5Z-Xza">
+                                <rect key="frame" x="16" y="79" width="300" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmR-H7-Gs3" customClass="CustomButton" customModule="Qmin" customModuleProvider="target">
+                                <rect key="frame" x="165" y="555" width="64" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="Qsave:" destination="OFQ-HV-xtt" eventType="touchUpInside" id="9Zc-Kc-pxm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.79544200899999995" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ok2-3u-gk7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add" id="UfK-iM-juh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hRZ-sD-82q">
-                            <connections>
-                                <action selector="Qsave:" destination="OFQ-HV-xtt" id="gZ7-WB-y7B"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add" id="UfK-iM-juh"/>
                     <connections>
                         <outlet property="Qmemo" destination="ZA2-G2-aDX" id="abw-Ie-2Se"/>
                         <outlet property="QmemoTextView" destination="Zbu-on-lGI" id="cCV-hS-XoR"/>
                         <outlet property="Qtitle" destination="OHN-5Z-Xza" id="Hh8-yb-08L"/>
                         <outlet property="QuestionField" destination="xIj-9p-QP2" id="dvb-UZ-LFl"/>
+                        <outlet property="SaveBtn" destination="TmR-H7-Gs3" id="KZp-8r-3W0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flz-wH-5EN" userLabel="First Responder" sceneMemberID="firstResponder"/>

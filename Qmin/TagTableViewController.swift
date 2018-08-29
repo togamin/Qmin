@@ -58,15 +58,20 @@ class TagTableViewController: UITableViewController {
         let alert = UIAlertController(title: "追加するタグを記入してください", message:nil, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "登録", style: .default, handler: {(action: UIAlertAction!) -> Void in
+            if alert.textFields![0].text! != "" {
+                //テキストフィールドの中身を配列に入れUserDefautに保存
+                self.tagList.append(alert.textFields![0].text!)
+                self.tagTableView.reloadData()
+                self.myDefault.set(self.tagList, forKey: "tagList")
             
-            //テキストフィールドの中身を配列に入れUserDefautに保存
-            self.tagList.append(alert.textFields![0].text!)
-            self.tagTableView.reloadData()
-            self.myDefault.set(self.tagList, forKey: "tagList")
-            
-            let alertOK = UIAlertController(title: "追加しました", message:nil, preferredStyle: .alert)
-            alertOK.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in}))
-            self.present(alertOK,animated: true,completion: {()->Void in print("表示されたよん")})
+                let alertOK = UIAlertController(title: "追加しました", message:nil, preferredStyle: .alert)
+                alertOK.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in}))
+                self.present(alertOK,animated: true,completion: {()->Void in print("表示されたよん")})
+            }else{
+                let alertNO = UIAlertController(title: "タグが記入されていません。", message:nil, preferredStyle: .alert)
+                alertNO.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in}))
+                self.present(alertNO,animated: true,completion: {()->Void in print("表示されたよん")})
+            }
             
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in print("キャンセル")}))
