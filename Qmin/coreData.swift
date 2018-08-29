@@ -138,6 +138,7 @@ func updateQ(Index:Int,question:String,tag:String,answer:String,date:String){
     //どのエンティティからdataを取得してくるかの設定
     let query:NSFetchRequest<QInfo> = QInfo.fetchRequest()
     let namePredicte = NSPredicate(format: "tag = %@",tag)
+    query.predicate = namePredicte
     do{
         //データを一括取得
         let fetchResults = try! viewContext.fetch(query)
@@ -156,6 +157,54 @@ func updateQ(Index:Int,question:String,tag:String,answer:String,date:String){
     }
 }
 
+
+//タグの更新
+func updateTag(oldTag:String,newTag:String){
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    //Entityを操作するためのオブジェクトを作成
+    let viewContext = appDelegate.persistentContainer.viewContext
+    //どのエンティティからdataを取得してくるかの設定
+    let query:NSFetchRequest<QInfo> = QInfo.fetchRequest()
+    let namePredicte = NSPredicate(format: "tag = %@",oldTag)
+    query.predicate = namePredicte
+    do{
+        //データを一括取得
+        let fetchResults = try! viewContext.fetch(query)
+        for result in fetchResults{
+         result.setValue(newTag,forKey:"tag")
+        }
+        do{
+            try viewContext.save()
+        }catch{
+            
+        }
+    }catch{
+        print("error")
+    }
+}
+
+//指定したタグのデータの削除
+func deleteTag(tag:String){
+    //AppDelegateを使う用意をしておく
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    //Entityを操作するためのオブジェクトを作成
+    let viewContext = appDelegate.persistentContainer.viewContext
+    //どのエンティティからdataを取得してくるかの設定
+    let query:NSFetchRequest<QInfo> = QInfo.fetchRequest()
+    let namePredicte = NSPredicate(format: "tag = %@",tag)
+    query.predicate = namePredicte
+    do{
+        //データを一括取得
+        let fetchResults = try! viewContext.fetch(query)
+        for result in fetchResults{
+            viewContext.delete(result)
+        }
+        //削除した状態を保存
+        try viewContext.save()
+    }catch{
+        print("error")
+    }
+}
 
 
 

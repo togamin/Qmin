@@ -54,7 +54,6 @@ class TagTableViewController: UITableViewController {
     }
     
     
-    
     @IBAction func addTag(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "追加するタグを記入してください", message:nil, preferredStyle: .alert)
         
@@ -79,6 +78,69 @@ class TagTableViewController: UITableViewController {
         alert.view.layer.cornerRadius = 25 //角丸にする。
         
         present(alert,animated: true,completion: {()->Void in print("表示されたよん")})
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        
+        let edit: UITableViewRowAction = UITableViewRowAction(style: .normal, title: "編集") { (action, index) -> Void in
+            print("編集")
+            let alert = UIAlertController(title: "タグ名を編集します。", message:nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in
+                //入力されたタグ名をUserDefaultに保存。
+                self.tagList = self.myDefault.object(forKey: "tagList") as! [String]
+                print("テスト",self.tagList)
+                let oldTag = self.tagList[indexPath.row]
+                let newTag = alert.textFields![0].text!
+                self.tagList[indexPath.row] = newTag
+                self.tagTableView.reloadData()
+                print("テスト",self.tagList)
+                
+                // Keyを指定して保存
+                self.myDefault.set(self.tagList, forKey: "tagList")
+                //CoreDetaのタグを変更して保存。
+                updateTag(oldTag:oldTag,newTag:newTag)
+            
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in print("キャンセル")}))
+            alert.addTextField(configurationHandler: {(addTitleField: UITextField!) -> Void in
+                addTitleField.text = self.tagList[indexPath.row]
+                addTitleField.placeholder = "タグ名を入力してください"//プレースホルダー
+            })
+            //その他アラートオプション
+            alert.view.layer.cornerRadius = 25 //角丸にする。
+            self.present(alert,animated: true,completion: {()->Void in print("表示されたよん")})
+            
+        }
+        let delete: UITableViewRowAction = UITableViewRowAction(style: .normal, title: "削除") { (action, index) -> Void in
+            
+            let alert = UIAlertController(title: "削除しますか?", message:"このタグの質問が全て削除されますが、よろしいですか?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in
+
+                //UserDefaultのタグを削除。
+                self.tagList = self.myDefault.object(forKey: "tagList") as! [String]
+                print("テスト",self.tagList)
+                let oldTag = self.tagList[indexPath.row]
+                self.tagList.remove(at: indexPath.row)
+                self.myDefault.set(self.tagList, forKey: "tagList")
+                self.tagTableView.reloadData()
+                //CoreDateからそのタグの情報を削除。
+                deleteTag(tag:oldTag)
+                
+                
+                
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {action in print("キャンセル")}))
+            //その他アラートオプション
+            alert.view.layer.cornerRadius = 25 //角丸にする。
+            self.present(alert,animated: true,completion: {()->Void in print("表示されたよん")})
+            print("削除")
+        }
+        
+        edit.backgroundColor = UIColor(red: 0.2, green: 1, blue: 0.2, alpha: 0.8)
+        delete.backgroundColor = UIColor(red: 1, green: 0.2, blue: 0.2, alpha: 0.8)
+        
+        return [edit,delete]
     }
     
     

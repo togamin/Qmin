@@ -152,23 +152,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-hI-Y3e">
-                                <rect key="frame" x="309" y="341" width="51" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-hI-Y3e">
+                                <rect key="frame" x="304" y="337" width="51" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="編集"/>
                                 <connections>
                                     <action selector="editQ:" destination="QjP-mC-eN0" eventType="touchUpInside" id="Z8x-5g-WI3"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9h-Ms-Sky">
-                                <rect key="frame" x="16" y="391" width="343" height="91"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9h-Ms-Sky">
+                                <rect key="frame" x="20" y="389" width="335" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="トピックを選択する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEN-AK-KSN">
-                                <rect key="frame" x="20" y="362" width="156" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="トピックを選択する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEN-AK-KSN">
+                                <rect key="frame" x="20" y="363" width="156" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -179,9 +176,18 @@
                             <constraint firstItem="7PL-bU-Yb6" firstAttribute="bottom" secondItem="6Mm-Vy-TNy" secondAttribute="bottom" constant="20" id="BEK-UB-XJ6"/>
                             <constraint firstItem="6Mm-Vy-TNy" firstAttribute="leading" secondItem="7PL-bU-Yb6" secondAttribute="leading" constant="87" id="DES-Sv-bs0"/>
                             <constraint firstItem="PTA-dO-16H" firstAttribute="leading" secondItem="7PL-bU-Yb6" secondAttribute="leading" constant="20" id="Kg6-ol-WGU"/>
+                            <constraint firstItem="t9h-Ms-Sky" firstAttribute="top" secondItem="wwC-hI-Y3e" secondAttribute="bottom" constant="10" id="Oi7-VU-FMa"/>
                             <constraint firstItem="7PL-bU-Yb6" firstAttribute="trailing" secondItem="PTA-dO-16H" secondAttribute="trailing" constant="20" id="SWD-hV-kbv"/>
+                            <constraint firstItem="t9h-Ms-Sky" firstAttribute="top" secondItem="PEN-AK-KSN" secondAttribute="bottom" constant="5" id="TeR-ym-Cim"/>
                             <constraint firstItem="PTA-dO-16H" firstAttribute="top" secondItem="7PL-bU-Yb6" secondAttribute="top" constant="20" id="b4Q-bY-BLP"/>
                             <constraint firstItem="7PL-bU-Yb6" firstAttribute="trailing" secondItem="6Mm-Vy-TNy" secondAttribute="trailing" constant="88" id="cXI-u1-JIq"/>
+                            <constraint firstItem="6Mm-Vy-TNy" firstAttribute="top" secondItem="t9h-Ms-Sky" secondAttribute="bottom" constant="25" id="eMn-bk-wmv"/>
+                            <constraint firstItem="t9h-Ms-Sky" firstAttribute="leading" secondItem="7PL-bU-Yb6" secondAttribute="leading" constant="20" id="hDZ-X0-IbM"/>
+                            <constraint firstItem="7PL-bU-Yb6" firstAttribute="trailing" secondItem="wwC-hI-Y3e" secondAttribute="trailing" constant="20" id="hsr-tK-yWv"/>
+                            <constraint firstItem="t9h-Ms-Sky" firstAttribute="top" secondItem="PEN-AK-KSN" secondAttribute="bottom" constant="5" id="nZ1-vh-Gi4"/>
+                            <constraint firstItem="7PL-bU-Yb6" firstAttribute="trailing" secondItem="t9h-Ms-Sky" secondAttribute="trailing" constant="20" id="oeo-zO-hpm"/>
+                            <constraint firstItem="PEN-AK-KSN" firstAttribute="leading" secondItem="7PL-bU-Yb6" secondAttribute="leading" constant="20" id="yu6-ph-Pod"/>
+                            <constraint firstItem="wwC-hI-Y3e" firstAttribute="top" secondItem="PTA-dO-16H" secondAttribute="bottom" constant="10" id="zhx-mt-oTV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7PL-bU-Yb6"/>
                     </view>
