@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,44 +129,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mm-Vy-TNy">
-                                <rect key="frame" x="143" y="543" width="89" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mm-Vy-TNy" customClass="CustomButton" customModule="Qmin" customModuleProvider="target">
+                                <rect key="frame" x="87" y="508" width="200" height="90"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="50c-M7-gLn"/>
+                                    <constraint firstAttribute="width" constant="200" id="CFV-vC-Rkh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="31"/>
+                                <state key="normal" title="Question"/>
                                 <connections>
                                     <action selector="Qmin:" destination="QjP-mC-eN0" eventType="touchUpInside" id="HoU-FN-gyx"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9h-Ms-Sky">
-                                <rect key="frame" x="16" y="432" width="343" height="91"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qmin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTA-dO-16H">
+                                <rect key="frame" x="20" y="84" width="335" height="243"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qmin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTA-dO-16H">
-                                <rect key="frame" x="16" y="147" width="343" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PTA-dO-16H" secondAttribute="height" multiplier="335:243" id="X7M-Js-cCb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-hI-Y3e">
-                                <rect key="frame" x="309" y="363" width="50" height="48"/>
+                                <rect key="frame" x="309" y="341" width="51" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Edit"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="編集"/>
                                 <connections>
                                     <action selector="editQ:" destination="QjP-mC-eN0" eventType="touchUpInside" id="Z8x-5g-WI3"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9h-Ms-Sky">
+                                <rect key="frame" x="16" y="391" width="343" height="91"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="トピックを選択する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEN-AK-KSN">
+                                <rect key="frame" x="20" y="362" width="156" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94149805860000002" green="0.93405903970000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7PL-bU-Yb6" firstAttribute="bottom" secondItem="6Mm-Vy-TNy" secondAttribute="bottom" constant="20" id="BEK-UB-XJ6"/>
+                            <constraint firstItem="6Mm-Vy-TNy" firstAttribute="leading" secondItem="7PL-bU-Yb6" secondAttribute="leading" constant="87" id="DES-Sv-bs0"/>
+                            <constraint firstItem="PTA-dO-16H" firstAttribute="leading" secondItem="7PL-bU-Yb6" secondAttribute="leading" constant="20" id="Kg6-ol-WGU"/>
+                            <constraint firstItem="7PL-bU-Yb6" firstAttribute="trailing" secondItem="PTA-dO-16H" secondAttribute="trailing" constant="20" id="SWD-hV-kbv"/>
+                            <constraint firstItem="PTA-dO-16H" firstAttribute="top" secondItem="7PL-bU-Yb6" secondAttribute="top" constant="20" id="b4Q-bY-BLP"/>
+                            <constraint firstItem="7PL-bU-Yb6" firstAttribute="trailing" secondItem="6Mm-Vy-TNy" secondAttribute="trailing" constant="88" id="cXI-u1-JIq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7PL-bU-Yb6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Question" id="XMB-17-r1x"/>
                     <connections>
+                        <outlet property="QBtn" destination="6Mm-Vy-TNy" id="NzQ-GS-fYo"/>
                         <outlet property="QLabel" destination="PTA-dO-16H" id="sZR-Z8-wsA"/>
                         <outlet property="editBtn" destination="wwC-hI-Y3e" id="HPu-Nl-qzK"/>
                         <outlet property="tagPicker" destination="t9h-Ms-Sky" id="v2D-Q5-rcD"/>
@@ -174,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlS-YK-ozU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="-143"/>
+            <point key="canvasLocation" x="840.79999999999995" y="-143.47826086956522"/>
         </scene>
         <!--My Tab View Controller-->
         <scene sceneID="5jV-13-BrS">

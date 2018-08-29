@@ -20,9 +20,27 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var tagPicker: UIPickerView!
     @IBOutlet weak var QLabel: UILabel!
     @IBOutlet weak var editBtn: UIButton!
-    
+    @IBOutlet weak var QBtn: CustomButton!
+    var preSelectedLb:UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //View
+        self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
+        //ボタン
+        self.QBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 0.9), for: .normal)//タップ前の状態
+        self.QBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 0.9), for: .highlighted)//タップした状態の色
+        self.QBtn.backgroundColor = UIColor(red: 0, green: 0.02, blue: 0.06, alpha: 0.8)//背景色
+        self.QBtn.layer.cornerRadius = 10//角丸
+        //ラベル
+        self.QLabel.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
+        self.QLabel.textColor = UIColor(red: 0, green: 0.02, blue: 0.06, alpha: 0.9)
+        self.QLabel.layer.cornerRadius = 10
+        self.QLabel.clipsToBounds = true
+        
+        self.tagPicker.layer.cornerRadius = 10
+        
 
         self.tagPicker.delegate = self
         self.tagPicker.dataSource = self
@@ -37,7 +55,7 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
                 Qregist(question:data.question,tag:data.tag,answer:data.answer,date:data.date)
             }
         }
-        myDefault.register(defaults: ["tagList" : ["就活","英語","面白い話","罰ゲーム"]])
+        myDefault.register(defaults: ["tagList" : ["就活","英会話","面白い話","罰ゲーム"]])
         self.tagList = self.myDefault.object(forKey: "tagList") as! [String]
         nowTag = self.tagList[0]
         
@@ -105,8 +123,8 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
         nowTag = self.tagList[row]
         print(self.tagList[row])
     }
-    
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
