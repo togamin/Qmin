@@ -21,6 +21,7 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var QLabel: UILabel!
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var QBtn: CustomButton!
+    @IBOutlet weak var penguin01: UIImageView!
     var preSelectedLb:UILabel!
 
     override func viewDidLoad() {
@@ -41,6 +42,8 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
         
         self.tagPicker.layer.cornerRadius = 10
         
+        //self.penguin01.image = UIImage(named: "penguin01.png")
+        
 
         self.tagPicker.delegate = self
         self.tagPicker.dataSource = self
@@ -55,7 +58,7 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
                 Qregist(question:data.question,tag:data.tag,answer:data.answer,date:data.date)
             }
         }
-        myDefault.register(defaults: ["tagList" : ["就活","英会話","面白い話","罰ゲーム"]])
+        myDefault.register(defaults: ["tagList" : ["就活","英会話","面白い話","罰ゲーム","今日の晩御飯"]])
         self.tagList = self.myDefault.object(forKey: "tagList") as! [String]
         nowTag = self.tagList[0]
         
