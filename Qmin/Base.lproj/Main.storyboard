@@ -240,11 +240,11 @@
             </objects>
             <point key="canvasLocation" x="-1015" y="208"/>
         </scene>
-        <!--Item 1-->
+        <!--Q-->
         <scene sceneID="HGX-FU-iNl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ub-4n-p2K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Q0l-KP-pNO"/>
+                    <tabBarItem key="tabBarItem" title="Q" image="Question" selectedImage="Question" id="Q0l-KP-pNO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iHN-Y2-RJq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -259,11 +259,11 @@
             </objects>
             <point key="canvasLocation" x="140" y="-143"/>
         </scene>
-        <!--Item 2-->
+        <!--Navigation Controller-->
         <scene sceneID="fA5-dH-AwD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lhe-hR-mZB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Wl7-kW-KuE"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="Wl7-kW-KuE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aTb-6B-sUK">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -487,11 +487,11 @@
             </objects>
             <point key="canvasLocation" x="2765.5999999999999" y="-122.78860569715144"/>
         </scene>
-        <!--Item-->
+        <!--Setting-->
         <scene sceneID="FZt-AH-C9o">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NVi-2n-gDE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ymh-OO-cB8"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="Setting" selectedImage="Setting" id="Ymh-OO-cB8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uer-eo-mKe">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -508,6 +508,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Question" width="25" height="25"/>
+        <image name="Setting" width="25" height="25"/>
         <image name="penguin01.png" width="1024" height="1024"/>
         <image name="penguin03.png" width="1024" height="1024"/>
     </resources>
