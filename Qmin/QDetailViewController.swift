@@ -71,7 +71,25 @@ class QDetailViewController: UIViewController {
         
         // ビューに追加
         self.view.addSubview(scrollView)
+        
+        
+        // 仮のサイズでツールバー生成
+        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
+        kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
+        // スペーサー
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        // 閉じるボタン
+        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action:#selector(self.closeKeybord(_:)))
+        kbToolBar.items = [spacer, commitButton]
+        self.QuestionField.inputAccessoryView = kbToolBar
+        self.QmemoTextView.inputAccessoryView = kbToolBar
+
     }
+    @objc func closeKeybord(_ sender:Any){
+        self.view.endEditing(true)
+    }
+
     
     @IBAction func QSaveBtn(_ sender: UIButton) {
         let alert = UIAlertController(title: "質問を上書きしますか？", message:nil, preferredStyle: .alert)
