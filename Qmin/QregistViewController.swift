@@ -45,7 +45,6 @@ class QregistViewController: UIViewController {
         scrollView.addSubview(Qmemo)
         
         
-        
         // UIScrollViewの大きさをスクリーンの縦方向を２倍にする
         scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight*2)
         
