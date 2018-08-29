@@ -205,6 +205,27 @@ func deleteTag(tag:String){
         print("error")
     }
 }
-
+//指定したタグの質問データの削除
+func deleteQ(tag:String,Index:Int){
+    //AppDelegateを使う用意をしておく
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    //Entityを操作するためのオブジェクトを作成
+    let viewContext = appDelegate.persistentContainer.viewContext
+    //どのエンティティからdataを取得してくるかの設定
+    let query:NSFetchRequest<QInfo> = QInfo.fetchRequest()
+    let namePredicte = NSPredicate(format: "tag = %@",tag)
+    query.predicate = namePredicte
+    do{
+        //データを一括取得
+        let fetchResults = try! viewContext.fetch(query)
+        let selectQ = fetchResults[Index]
+        viewContext.delete(selectQ)
+        
+        //削除した状態を保存
+        try viewContext.save()
+    }catch{
+        print("error")
+    }
+}
 
 
