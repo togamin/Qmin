@@ -17,6 +17,8 @@ class QDetailViewController: UIViewController {
     // Screenの幅
     var screenWidth:CGFloat!
     
+    @IBOutlet weak var Qtitle: UILabel!
+    @IBOutlet weak var Qmemo: UILabel!
     @IBOutlet weak var QuestionField: UITextField!
     @IBOutlet weak var QmemoTextView: UITextView!
     
@@ -27,6 +29,7 @@ class QDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         self.QuestionField.text = question
         self.QmemoTextView.text = answer
         
@@ -43,6 +46,8 @@ class QDetailViewController: UIViewController {
         // UIScrollViewに追加
         scrollView.addSubview(QuestionField)
         scrollView.addSubview(QmemoTextView)
+        scrollView.addSubview(Qtitle)
+        scrollView.addSubview(Qmemo)
         
         // UIScrollViewの大きさをスクリーンの縦方向を２倍にする
         scrollView.contentSize = CGSize(width: screenWidth, height: screenHeight*2)

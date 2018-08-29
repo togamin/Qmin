@@ -17,6 +17,8 @@ class QregistViewController: UIViewController {
     // Screenの幅
     var screenWidth:CGFloat!
 
+    @IBOutlet weak var Qtitle: UILabel!
+    @IBOutlet weak var Qmemo: UILabel!
     @IBOutlet weak var QuestionField: UITextField!
     @IBOutlet weak var QmemoTextView: UITextView!
 
@@ -39,6 +41,8 @@ class QregistViewController: UIViewController {
         // UIScrollViewに追加
         scrollView.addSubview(QuestionField)
         scrollView.addSubview(QmemoTextView)
+        scrollView.addSubview(Qtitle)
+        scrollView.addSubview(Qmemo)
         
         
         

@@ -355,14 +355,28 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="質問に対する回答orメモ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zbu-on-lGI">
-                                <rect key="frame" x="16" y="167" width="343" height="331"/>
+                                <rect key="frame" x="16" y="197" width="343" height="331"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問の回答、詳細、メモを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA2-G2-aDX">
+                                <rect key="frame" x="16" y="168" width="347" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問 or タイトルを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHN-5Z-Xza">
+                                <rect key="frame" x="16" y="79" width="285" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.94149805863468827" green="0.93405903966238957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.79544200899999995" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ok2-3u-gk7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add" id="UfK-iM-juh">
@@ -373,7 +387,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="Qmemo" destination="ZA2-G2-aDX" id="abw-Ie-2Se"/>
                         <outlet property="QmemoTextView" destination="Zbu-on-lGI" id="cCV-hS-XoR"/>
+                        <outlet property="Qtitle" destination="OHN-5Z-Xza" id="Hh8-yb-08L"/>
                         <outlet property="QuestionField" destination="xIj-9p-QP2" id="dvb-UZ-LFl"/>
                     </connections>
                 </viewController>
@@ -390,21 +406,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUR-BX-nbq">
-                                <rect key="frame" x="16" y="127" width="343" height="30"/>
+                                <rect key="frame" x="16" y="124" width="339" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="wow" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U8F-hv-Rb9">
-                                <rect key="frame" x="16" y="234" width="343" height="269"/>
+                                <rect key="frame" x="16" y="239" width="343" height="269"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問 or タイトルを入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buO-sb-ePQ">
+                                <rect key="frame" x="20" y="95" width="285" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問の回答、詳細、メモを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpu-8P-6Bk">
+                                <rect key="frame" x="20" y="210" width="347" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.94149805860000002" green="0.93405903970000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.79544200897216799" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="DVe-Qe-fJH"/>
                     </view>
                     <navigationItem key="navigationItem" title="質問詳細" id="Kmz-4y-76u">
@@ -415,13 +445,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="Qmemo" destination="qpu-8P-6Bk" id="b6D-NH-tH5"/>
                         <outlet property="QmemoTextView" destination="U8F-hv-Rb9" id="FU4-ln-y5v"/>
+                        <outlet property="Qtitle" destination="buO-sb-ePQ" id="QU7-Ki-Xf7"/>
                         <outlet property="QuestionField" destination="uUR-BX-nbq" id="yWO-GS-n01"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gP3-eC-GyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2767" y="-122"/>
+            <point key="canvasLocation" x="2765.5999999999999" y="-122.78860569715144"/>
         </scene>
         <!--Item-->
         <scene sceneID="FZt-AH-C9o">
