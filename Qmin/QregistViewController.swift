@@ -94,7 +94,7 @@ class QregistViewController: UIViewController {
             
             Qregist(question:self.QuestionField.text!,tag:nowTag,answer:self.QmemoTextView.text,date:nowTime())
             
-            let alertOK = UIAlertController(title: "上書きしました", message:nil, preferredStyle: .alert)
+            let alertOK = UIAlertController(title: "登録しました。", message:nil, preferredStyle: .alert)
             alertOK.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction!) -> Void in}))
             self.present(alertOK,animated: true,completion: {()->Void in print("表示されたよん")})
             }else{

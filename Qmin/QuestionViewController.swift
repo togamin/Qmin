@@ -12,6 +12,8 @@ var nowTag:String!
 
 class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var myView: UIView!
+    
     let myDefault = UserDefaults.standard
     var QList:[qInfo]!
     var tagList:[String]!
@@ -39,6 +41,12 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
         self.QLabel.textColor = UIColor(red: 0, green: 0.02, blue: 0.06, alpha: 0.9)
         self.QLabel.layer.cornerRadius = 10
         self.QLabel.clipsToBounds = true
+        self.QLabel.shadowOffset = CGSize(width: 1, height: 1 )
+        
+        self.myView.layer.cornerRadius = 10
+        self.myView.clipsToBounds = true
+        self.myView.addSubview(QLabel)
+        
         
         self.tagPicker.layer.cornerRadius = 10
         
@@ -83,6 +91,8 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
         self.Qget = self.QList[Int(self.random)]
         print(self.random)
         self.QLabel.text = self.Qget.question
+        
+        UIView.transition(with: self.myView, duration: 2.5, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
     }
     
     @IBAction func editQ(_ sender: UIButton) {
