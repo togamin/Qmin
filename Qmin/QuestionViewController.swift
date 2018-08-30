@@ -46,6 +46,7 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
         self.myView.layer.cornerRadius = 10
         self.myView.clipsToBounds = true
         self.myView.addSubview(QLabel)
+        self.myView.addSubview(penguin01)
         
         
         self.tagPicker.layer.cornerRadius = 10

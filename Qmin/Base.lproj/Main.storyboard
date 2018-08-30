@@ -474,6 +474,10 @@
                                     <action selector="QSaveBtn:" destination="Ep7-sn-pkD" eventType="touchUpInside" id="pee-eS-HhS"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="penguin01.png" translatesAutoresizingMaskIntoConstraints="NO" id="U1T-aN-HRc">
+                                <rect key="frame" x="296" y="513" width="74" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.79544200897216799" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="DVe-Qe-fJH"/>
@@ -491,6 +495,7 @@
                         <outlet property="Qtitle" destination="buO-sb-ePQ" id="QU7-Ki-Xf7"/>
                         <outlet property="QuestionField" destination="uUR-BX-nbq" id="yWO-GS-n01"/>
                         <outlet property="SaveBtn" destination="AlV-tC-wB5" id="lxo-jm-dlf"/>
+                        <outlet property="penguin01View" destination="U1T-aN-HRc" id="Nvr-I7-9eu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gP3-eC-GyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
