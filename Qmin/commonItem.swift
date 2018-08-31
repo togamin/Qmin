@@ -37,6 +37,42 @@ return data
 
 //質問のデフォルト
 var Qdefault:[qInfo]! = [
+    //ちょっとした話題
+    qInfo(question:"2次元の世界に行けるとしたら、どんなアニメ、本、映画の世界に行きたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"永遠に生きられるなら何をして過ごす?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"あなたが死んだ後、周りの人にどんな人だったと思われたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"あなたにとって「完璧な日」とはどんな一日?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"架空のキャラクターを現実世界に呼ぶなら、誰を呼ぶ?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"1円も持っていなかったら、これからどうやって生きる?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"好きな人のタイプは?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"「都会」と「田舎」どっちに住みたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"人生で一番辛かったことは?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"人生で一番楽しかったことは?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"明日死ぬとしたら、今日何する?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"もしお金を無限に持っているとしたら何する？",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"もし総理大臣になったら、何をする?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"人生で一番恥ずかしかった経験は?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"誰にも言ったことがない秘密について。",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"もし100歳まで健康に生きるとしたら、何がしたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"好きな人いる?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"過去どんな人と付き合った?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"無人島に何か一つ持って行くとしたら何を持って行く?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"死ぬ前に訪れたい場所5選",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"変わった友達の話。",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"小さいころの話",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"不思議な体験の話。",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"動物に生まれ変わるとしたら、何になりたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"一人だけ生き返らせることができるとしたら誰を生き返らす?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"視覚・聴覚・触覚・味覚・嗅覚,どれか一つだけで生きるとしたらどれを選ぶ?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"人生で一番影響を受けた本は?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"人生最大の失敗は?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"超能力を使えるとしたら、どんな能力を使って何をしたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"タイムトラベルができるなら、過去と未来どっちにいく?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"自分自身のことを1つだけ変えられるとしたら、何を変える?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"一番大切な子供の頃の記憶は?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"どんな死に方をしたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    qInfo(question:"「愛」の定義は?",tag:"ちょっとした話題",answer:"",date:nowTime()),
+    
     //「就活」
     qInfo(question:"頑張ったことは何ですか？",tag:"就活",answer:"器械体操です.より難度の高い技を習得することを目標に頑張りました。",date:nowTime()),
     qInfo(question:"強みは何ですか?",tag:"就活",answer:"筋力です。器械体操を10年ほど続けていたので、筋力には自身があります。",date:nowTime()),
@@ -51,6 +87,8 @@ var Qdefault:[qInfo]! = [
     qInfo(question:"どれぐらい給料欲しい ?",tag:"就活",answer:"",date:nowTime()),
     qInfo(question:"どのようにして弊社に貢献できると考えている?",tag:"就活",answer:"",date:nowTime()),
     qInfo(question:"どのようにしてストレスを発散させていますか?",tag:"就活",answer:"",date:nowTime()),
+    qInfo(question:"自己PRをしてください。(5分)",tag:"就活",answer:"",date:nowTime()),
+    qInfo(question:"自己PRをしてください。(1分)",tag:"就活",answer:"私は、目的を達成するために、考え主体的に行動し努力できる人間です。それを裏付けるエピソードとして主に2つあります。一つ目は器械体操での活動です。ひねり技、大車輪等難度の高い技を習得することを目的に、どうすればできるのかを考え、できる人に積極的に聞き、練習を積み重ねることによって、多くの技を習得してきました。二つ目は研究データの解析を簡略化するプログラムの作成です。研究データの解析を簡略化することを目的に、その方法を模索。独学でプログラミング言語Pythonを勉強し、作りあげた。以上のことから、私は、目的を達成するために、考え主体的に行動し努力できる人間であると考えます。",date:nowTime()),
     
     
     
@@ -103,8 +141,14 @@ var Qdefault:[qInfo]! = [
     qInfo(question:"好きな人に向かって愛を叫ぶ。",tag:"罰ゲーム",answer:"",date:nowTime()),
     qInfo(question:"腕立て伏せ50回",tag:"罰ゲーム",answer:"",date:nowTime()),
     qInfo(question:"みんなの分のアイスを買ってくる",tag:"罰ゲーム",answer:"",date:nowTime()),
-    //「面白い話」
+    qInfo(question:"右隣にいる人をお姫様抱っこする。",tag:"罰ゲーム",answer:"",date:nowTime()),
+    qInfo(question:"誰も知らない秘密を言う。",tag:"罰ゲーム",answer:"",date:nowTime()),
     
+    
+    //「面白い話」
+    qInfo(question:"新幹線で。",tag:"面白い話",answer:"新幹線でふと目が覚めたら、隣の席のおばあさんがテーブルの飲み物置きの少しくぼんだとこに醤油を入れお寿司食べてる…おばあちゃん…",date:nowTime()),
+    qInfo(question:"仕事中。",tag:"面白い話",answer:"仕事があまりに暇なので、思わず上司（30代男性）に「今日って僕帰ってもよくないですか？」と言ったら、「側にいてくれるだけでいい」と言われた。彼女かw",date:nowTime()),
+    qInfo(question:"壁ドン",tag:"面白い話",answer:"彼女が壁ドンされてみたいと言った。しょうがないから、壁に寄らせて。いざ！壁ドン！「ドンッ!!!……ぶっ！！！」同時に屁が出た。",date:nowTime()),
     
     
     
@@ -114,7 +158,8 @@ var Qdefault:[qInfo]! = [
     qInfo(question:"オムライス",tag:"今日の晩御飯",answer:"",date:nowTime()),
     qInfo(question:"焼き鳥",tag:"今日の晩御飯",answer:"",date:nowTime()),
     qInfo(question:"寿司",tag:"今日の晩御飯",answer:"",date:nowTime()),
-    qInfo(question:"ラーメン",tag:"今日の晩御飯",answer:"",date:nowTime())
+    qInfo(question:"ラーメン",tag:"今日の晩御飯",answer:"",date:nowTime()),
+    qInfo(question:"お好み焼き",tag:"今日の晩御飯",answer:"",date:nowTime())
 ]
 
 

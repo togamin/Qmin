@@ -67,7 +67,7 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
                 Qregist(question:data.question,tag:data.tag,answer:data.answer,date:data.date)
             }
         }
-        myDefault.register(defaults: ["tagList" : ["就活","英会話","面白い話","罰ゲーム","今日の晩御飯"]])
+        myDefault.register(defaults: ["tagList" : ["ちょっとした話題","就活","英会話","面白い話","罰ゲーム","今日の晩御飯"]])
         self.tagList = self.myDefault.object(forKey: "tagList") as! [String]
         nowTag = self.tagList[0]
         
