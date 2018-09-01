@@ -77,6 +77,8 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
     override func viewWillAppear(_ animated: Bool) {
         self.QLabel.text = "Qmin"
         self.editBtn.isEnabled = false
+        self.tagList = self.myDefault.object(forKey: "tagList") as! [String]
+        self.tagPicker.reloadComponent(0)
     }
     
     //ボタンを押すと質問がランダムに表示される。

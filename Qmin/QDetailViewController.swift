@@ -23,7 +23,6 @@ class QDetailViewController: UIViewController {
     @IBOutlet weak var QmemoTextView: UITextView!
     @IBOutlet weak var SaveBtn: UIButton!
     
-    @IBOutlet weak var penguin01View: UIImageView!
     var question:String!
     var answer:String!
     var Index:Int!
@@ -59,7 +58,7 @@ class QDetailViewController: UIViewController {
         self.QmemoTextView.frame = CGRect(x:20,y:140,width:screenWidth - 40,height: 300)
         self.QmemoTextView.layer.cornerRadius = 10
         self.SaveBtn.frame = CGRect(x:screenSize.width/2 - 100,y:460,width:200,height: 60)
-        self.penguin01View.frame = CGRect(x:screenSize.width/2 + 100,y:450,width:80,height: 80)
+        
         
         // UIScrollViewに追加
         scrollView.addSubview(QuestionField)
@@ -67,7 +66,6 @@ class QDetailViewController: UIViewController {
         scrollView.addSubview(Qtitle)
         scrollView.addSubview(Qmemo)
         scrollView.addSubview(SaveBtn)
-        scrollView.addSubview(penguin01View)
         
         
         

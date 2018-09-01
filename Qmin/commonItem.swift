@@ -37,7 +37,7 @@ return data
 
 //質問のデフォルト
 var Qdefault:[qInfo]! = [
-    //ちょっとした話題
+    /*ちょっとした話題*/
     qInfo(question:"2次元の世界に行けるとしたら、どんなアニメ、本、映画の世界に行きたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
     qInfo(question:"永遠に生きられるなら何をして過ごす?",tag:"ちょっとした話題",answer:"",date:nowTime()),
     qInfo(question:"あなたが死んだ後、周りの人にどんな人だったと思われたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
@@ -72,8 +72,7 @@ var Qdefault:[qInfo]! = [
     qInfo(question:"一番大切な子供の頃の記憶は?",tag:"ちょっとした話題",answer:"",date:nowTime()),
     qInfo(question:"どんな死に方をしたい?",tag:"ちょっとした話題",answer:"",date:nowTime()),
     qInfo(question:"「愛」の定義は?",tag:"ちょっとした話題",answer:"",date:nowTime()),
-    
-    //「就活」
+    /*「就活」*/
     qInfo(question:"頑張ったことは何ですか？",tag:"就活",answer:"器械体操です.より難度の高い技を習得することを目標に頑張りました。",date:nowTime()),
     qInfo(question:"強みは何ですか?",tag:"就活",answer:"筋力です。器械体操を10年ほど続けていたので、筋力には自身があります。",date:nowTime()),
     qInfo(question:"尊敬する人は誰ですか?",tag:"就活",answer:"ニコラ・テスラです。自分の発想、アイデアを実現するために、頑張っていた点を尊敬しています。また、その天才さに惹かれています。",date:nowTime()),
@@ -89,10 +88,7 @@ var Qdefault:[qInfo]! = [
     qInfo(question:"どのようにしてストレスを発散させていますか?",tag:"就活",answer:"",date:nowTime()),
     qInfo(question:"自己PRをしてください。(5分)",tag:"就活",answer:"",date:nowTime()),
     qInfo(question:"自己PRをしてください。(1分)",tag:"就活",answer:"私は、目的を達成するために、考え主体的に行動し努力できる人間です。それを裏付けるエピソードとして主に2つあります。一つ目は器械体操での活動です。ひねり技、大車輪等難度の高い技を習得することを目的に、どうすればできるのかを考え、できる人に積極的に聞き、練習を積み重ねることによって、多くの技を習得してきました。二つ目は研究データの解析を簡略化するプログラムの作成です。研究データの解析を簡略化することを目的に、その方法を模索。独学でプログラミング言語Pythonを勉強し、作りあげた。以上のことから、私は、目的を達成するために、考え主体的に行動し努力できる人間であると考えます。",date:nowTime()),
-    
-    
-    
-    //「英会話」
+    /*「英会話」*/
     qInfo(question:"What is your dream ?",tag:"英会話",answer:"My dream is to be Doraemon.",date:nowTime()),
     qInfo(question:"Do you have a girlfriend/boyfriend ?",tag:"英会話",answer:"",date:nowTime()),
     qInfo(question:"What is your favorite food ?",tag:"英会話",answer:"",date:nowTime()),
@@ -133,8 +129,7 @@ var Qdefault:[qInfo]! = [
     qInfo(question:"If you have a time machine, when do you want to go ? Why ?",tag:"英会話",answer:"",date:nowTime()),
     qInfo(question:"What have you ever regretted the most? ?",tag:"英会話",answer:"",date:nowTime()),
     qInfo(question:"What is the most important thing for you ?",tag:"英会話",answer:"",date:nowTime()),
-    
-    //「罰ゲーム」
+    /*「罰ゲーム」*/
     qInfo(question:"ドラえもんのモノマネをする。",tag:"罰ゲーム",answer:"",date:nowTime()),
     qInfo(question:"変顔の写真を撮られる",tag:"罰ゲーム",answer:"",date:nowTime()),
     qInfo(question:"自分の名前を尻文字で",tag:"罰ゲーム",answer:"",date:nowTime()),
@@ -143,23 +138,23 @@ var Qdefault:[qInfo]! = [
     qInfo(question:"みんなの分のアイスを買ってくる",tag:"罰ゲーム",answer:"",date:nowTime()),
     qInfo(question:"右隣にいる人をお姫様抱っこする。",tag:"罰ゲーム",answer:"",date:nowTime()),
     qInfo(question:"誰も知らない秘密を言う。",tag:"罰ゲーム",answer:"",date:nowTime()),
-    
-    
-    //「面白い話」
+    /*「面白い話」*/
     qInfo(question:"新幹線で。",tag:"面白い話",answer:"新幹線でふと目が覚めたら、隣の席のおばあさんがテーブルの飲み物置きの少しくぼんだとこに醤油を入れお寿司食べてる…おばあちゃん…",date:nowTime()),
     qInfo(question:"仕事中。",tag:"面白い話",answer:"仕事があまりに暇なので、思わず上司（30代男性）に「今日って僕帰ってもよくないですか？」と言ったら、「側にいてくれるだけでいい」と言われた。彼女かw",date:nowTime()),
     qInfo(question:"壁ドン",tag:"面白い話",answer:"彼女が壁ドンされてみたいと言った。しょうがないから、壁に寄らせて。いざ！壁ドン！「ドンッ!!!……ぶっ！！！」同時に屁が出た。",date:nowTime()),
-    
-    
-    
-    //「今日の晩御飯」
+    /*「今日の晩御飯」*/
     qInfo(question:"ピーマンの肉詰め",tag:"今日の晩御飯",answer:"",date:nowTime()),
     qInfo(question:"カレーライス",tag:"今日の晩御飯",answer:"",date:nowTime()),
     qInfo(question:"オムライス",tag:"今日の晩御飯",answer:"",date:nowTime()),
     qInfo(question:"焼き鳥",tag:"今日の晩御飯",answer:"",date:nowTime()),
     qInfo(question:"寿司",tag:"今日の晩御飯",answer:"",date:nowTime()),
     qInfo(question:"ラーメン",tag:"今日の晩御飯",answer:"",date:nowTime()),
-    qInfo(question:"お好み焼き",tag:"今日の晩御飯",answer:"",date:nowTime())
+    qInfo(question:"お好み焼き",tag:"今日の晩御飯",answer:"",date:nowTime()),
+    qInfo(question:"肉じゃが",tag:"今日の晩御飯",answer:"",date:nowTime()),
+    qInfo(question:"さえずる小鳥のソテー",tag:"今日の晩御飯",answer:"",date:nowTime()),
+    qInfo(question:"魚",tag:"今日の晩御飯",answer:"",date:nowTime()),
+    qInfo(question:"焼肉",tag:"今日の晩御飯",answer:"",date:nowTime()),
+    qInfo(question:"イタリアン",tag:"今日の晩御飯",answer:"",date:nowTime())
 ]
 
 
