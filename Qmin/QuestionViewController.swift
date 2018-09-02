@@ -14,6 +14,16 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var myView: UIView!
     
+    // UIScrollViewインスタンス生成
+    var scrollView = UIScrollView()
+    // Screenの高さ
+    var screenHeight:CGFloat!
+    // Screenの幅
+    var screenWidth:CGFloat!
+    
+    var scrollHeight:CGFloat!
+    
+    @IBOutlet weak var topicLabel: UILabel!
     let myDefault = UserDefaults.standard
     var QList:[qInfo]!
     var tagList:[String]!
@@ -28,7 +38,8 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //スクロールViewのながさ
+        scrollHeight = 557
         //View
         self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
         //ボタン
@@ -45,15 +56,68 @@ class QuestionViewController: UIViewController,UIPickerViewDelegate, UIPickerVie
         
         self.myView.layer.cornerRadius = 10
         self.myView.clipsToBounds = true
-        self.myView.addSubview(QLabel)
-        self.myView.addSubview(penguin01)
-        
         
         self.tagPicker.layer.cornerRadius = 10
         
-        //self.penguin01.image = UIImage(named: "penguin01.png")
         
+        // 画面サイズ取得
+        let screenSize: CGRect = UIScreen.main.bounds
+        screenWidth = screenSize.width
+        screenHeight = screenSize.height
+        
+        // 表示窓のサイズと位置を設定
+        scrollView.frame.size =
+            CGSize(width: screenWidth, height: screenHeight)
+        scrollView.center = self.view.center
+        //画面上UIの位置
+        self.myView.frame = CGRect(x:20,y:20,width:screenWidth - 40,height: 230)
+        self.QLabel.frame = CGRect(x:0,y:0,width:screenWidth - 40,height: 230)
+        self.penguin01.frame = CGRect(x:screenWidth - 140,y:130,width:100,height: 100)
+        self.editBtn.frame = CGRect(x:screenWidth - 60,y:255,width:40,height: 35)
+        self.tagPicker.frame = CGRect(x:20,y:295,width:screenWidth - 40,height: 110)
+        self.topicLabel.frame = CGRect(x:20,y:265,width:screenWidth - 100,height: 20)
+        self.QBtn.frame = CGRect(x:screenWidth/2 - 100,y:435,width:200,height: 90)
+        
+        // UIScrollViewに追加
+        scrollView.addSubview(self.myView)
+        scrollView.addSubview(self.editBtn)
+        scrollView.addSubview(self.tagPicker)
+        scrollView.addSubview(self.QBtn)
+        scrollView.addSubview(self.topicLabel)
 
+        
+        self.myView.addSubview(self.QLabel)
+        self.myView.addSubview(self.penguin01)
+        
+        // UIScrollViewの大きさをスクリーンの縦方向を２倍にする
+        scrollView.contentSize = CGSize(width: screenWidth, height:scrollHeight)
+        
+        // ビューに追加
+        self.view.addSubview(scrollView)
+        
+        
+        
+        
+        
+        
+//
+//        self.myView.frame = CGRect(x:20,y:screenSize.height*0.03,width:screenSize.width - 40,height: screenSize.height*0.4)
+//        self.editBtn.frame = CGRect(x:screenSize.width - 60,y:screenSize.height*0.44,width:40,height:screenSize.height*0.06)
+//        self.tagPicker.frame = CGRect(x:20,y:screenSize.height*0.51,width:screenSize.width - 40,height:screenSize.height*0.2)
+////
+////
+//        self.allView.addSubview(self.myView)
+//        self.allView.addSubview(self.editBtn)
+//        self.allView.addSubview(self.tagPicker)
+//        //self.allView.addSubview()
+//        //self.allView.addSubview()
+//        //self.allView.addSubview()
+//
+
+        
+        
+        
+        
         self.tagPicker.delegate = self
         self.tagPicker.dataSource = self
         
